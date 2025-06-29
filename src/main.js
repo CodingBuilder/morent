@@ -295,8 +295,6 @@ if (viewOne && viewTwo) {
 }
 var commentOne = document.querySelectorAll(".comments .comment .comment-info p")[0];
 var commentTwo = document.querySelectorAll(".comments .comment .comment-info p")[1];
-var originalTextOne = commentOne.textContent;
-var originalTextTwo = commentTwo.textContent;
 function changeTextLength(text, chars) {
   if (text.length <= chars) throw Error("The Text Length Is Smaller Than The Given Chars");
   var newText = "";
@@ -307,6 +305,8 @@ function changeTextLength(text, chars) {
   return newText;
 }
 if (commentOne && commentTwo) {
+  var originalTextOne = commentOne.textContent;
+  var originalTextTwo = commentTwo.textContent;
   addEventListener("DOMContentLoaded", function () {
     if (innerWidth <= 768) {
       var shortTextOne = changeTextLength(commentOne.textContent || "", 80);

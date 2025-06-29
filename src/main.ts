@@ -357,8 +357,7 @@ if (viewOne && viewTwo) {
 const commentOne = document.querySelectorAll(".comments .comment .comment-info p")[0] as HTMLParagraphElement;
 const commentTwo = document.querySelectorAll(".comments .comment .comment-info p")[1] as HTMLParagraphElement;
 
-const originalTextOne = commentOne.textContent;
-const originalTextTwo = commentTwo.textContent;
+
 
 function changeTextLength(text: string, chars: number): string {
   if (text.length <= chars) throw Error("The Text Length Is Smaller Than The Given Chars");
@@ -373,6 +372,8 @@ function changeTextLength(text: string, chars: number): string {
 } 
 
 if (commentOne && commentTwo) {
+  const originalTextOne = commentOne.textContent;
+  const originalTextTwo = commentTwo.textContent;
   addEventListener("DOMContentLoaded", () => {
     if (innerWidth <= 768) {
       let shortTextOne = changeTextLength(commentOne.textContent || "", 80);
