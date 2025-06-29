@@ -1,11 +1,11 @@
 doctype html
 html(lang="en")
-  include includes/_pageHead
+  include ../includes/_pageHead
   body
-    include includes/variables/_popularCars
-    include includes/variables/_recomendationCars
-    include includes/variables/_links
-    include includes/sections/_header
+    include ../includes/variables/_popularCars
+    include ../includes/variables/_recomendationCars
+    include ../includes/variables/_links
+    include ../includes/sections/_header
     main.pt-60.pb-60
       .container
         div(class="ads between-flex")
@@ -21,7 +21,7 @@ html(lang="en")
             a(href="cars-details.html" class="rad-3 d-block w-fit mt-25") Rental Car
             div(class="image w-full txt-c")
               img(src="imgs/ad02.png", alt="ad-02" class="w-400")
-        include includes/sections/_customize
+        include ../includes/sections/_customize
         div(class="cars-list between-flex mb-30 mt-50 pl-20 pr-20 fw-semi-bold fs-16")
           h4(class="m-0") Popular Cars
           a(href="#") View All
@@ -144,5 +144,5 @@ html(lang="en")
         div(class="show-more mt-80 mb-20 p-relative d-flex align-center")
           a(href="#" class="rad-3 d-block w-fit") Show more cars
           span(class="remaining fs-16 fw-semi-bold") 150 cars
-    include includes/sections/_footer
+    include ../includes/sections/_footer
     script(src="src/main.js")

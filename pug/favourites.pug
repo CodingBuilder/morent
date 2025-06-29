@@ -1,16 +1,16 @@
 doctype html
 html(lang="en")
-  include includes/_pageHead
+  include ../includes/_pageHead
   body
-    include includes/variables/_popularCars
-    include includes/variables/_recomendationCars
-    include includes/variables/_links
-    include includes/sections/_header
+    include ../includes/variables/_popularCars
+    include ../includes/variables/_recomendationCars
+    include ../includes/variables/_links
+    include ../includes/sections/_header
     main(class="favourite-page mb-80")
       .container
         div(class="cars-list mb-30 mt-50 pl-20 pr-20 fw-semi-bold fs-16")
           h4(class="m-0") Favourite cars
         div(class="favourite-cars list d-grid gap-30")
         p(class="no-favourites d-none fs-40 mt-40 mb-40") You don't have any favourite cars yet!
-    include includes/sections/_footer
+    include ../includes/sections/_footer
     script(src="src/main.js")

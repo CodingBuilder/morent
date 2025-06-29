@@ -1,11 +1,11 @@
 doctype html
 html(lang="en")
-  include includes/_pageHead
+  include ../includes/_pageHead
   body 
-    include includes/variables/_links
-    include includes/sections/_header
+    include ../includes/variables/_links
+    include ../includes/sections/_header
     div(class="details-page d-flex")
-      include includes/sections/_aside
+      include ../includes/sections/_aside
       main.car-page.p-40
         div(class="car-info d-flex gap-20")
           div(class="images")
@@ -54,7 +54,7 @@ html(lang="en")
         div(class="comments mt-40")
           div(class="comment d-flex gap-20 p-20 rad-10")
             div(class="image")
-              img(src="imgs/profile01.png", alt="profile-img")
+              img(src="imgs/Profile01.png", alt="profile-img")
             div(class="comment-info")
               div(class="title between-flex mb-10")
                 span(class="name fs-20 fw-bold fs-14") Alex Stanton
@@ -68,7 +68,7 @@ html(lang="en")
               p.fs-14 We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.
           div(class="comment d-flex gap-20 mt-30 p-20 rad-10")
             div(class="image")
-              img(src="imgs/profile02.png", alt="profile-img")
+              img(src="imgs/Profile02.png", alt="profile-img")
             div(class="comment-info")
               div(class="title between-flex mb-10")
                 span(class="name fs-20 fw-bold fs-14") Skylar Dias
@@ -84,5 +84,5 @@ html(lang="en")
           h4(class="m-0") Recent Cars
           a(href="#") View All
         div(class="list d-grid gap-30")
-    include includes/sections/_footer
+    include ../includes/sections/_footer
     script(src="src/main.js")

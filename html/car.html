@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Morent: Rent Any Car You Wan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/logo.png">
+    <title>Morent</title>
+  </head>
+  <body> 
+    <header>
+      <div class="container between-flex">
+        <div class="left-side d-flex align-center"><a class="large logo" href="index.html">MORENT</a>
+          <diV class="search d-flex align-center p-relative">
+            
+            <i class="fa-solid fa-magnifying-glass p-absolute fs-20"></i>
+            <input class="h-45 rad-20 b-none ml-60 w-550 pl-50 pr-50" type="text" placeholder="Search something here">
+            <i class="fa-solid fa-sliders p-absolute fs-20 pointer details"></i>
+          </diV>
+        </div>
+        <div class="right-side">
+          <div class="icons d-flex align-center rounded w-50 h-50 between-flex w-full"><a class="mobile logo" href="index.html">MORENT</a><a href="favourites.html"><i class="fa-solid fa-heart rounded w-44 h-44 fs-20 icon mr-15"></i></a>
+            <div class="notifications notifications p-relative mr-15"><a><i class="fa-solid fa-bell rounded w-44 h-44 fs-20 icon"></i></a></div><a><i class="fa-solid fa-gear rounded w-44 h-44 fs-20 mr-15 icon"></i></a><img src="imgs/avatar.png">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="details-page d-flex">
+      <aside>
+        <div class="cars-list mb-30 mt-50 pr-20 fw-semi-bold fs-16">
+          <h4 class="m-0 fs-14">Type</h4>
+        </div>
+        <form class="types d-flex" action="">
+          <div>
+            <input type="checkbox" name="sport" id="sport">
+            <label for="sport">Sport</label>
+          </div>
+          <div>
+            <input type="checkbox" name="SUV" id="SUV">
+            <label for="SUV">SUV</label>
+          </div>
+          <div>
+            <input type="checkbox" name="MPV" id="MPV">
+            <label for="MPV">MPV</label>
+          </div>
+          <div>
+            <input type="checkbox" name="sedan" id="sedan">
+            <label for="sedan">Sedan</label>
+          </div>
+          <div>
+            <input type="checkbox" name="coupe" id="coupe">
+            <label for="coupe">Coupe</label>
+          </div>
+          <div>
+            <input type="checkbox" name="hatchback" id="hatchback">
+            <label for="hatchback">Hatchback</label>
+          </div>
+        </form>
+        <div class="cars-list mb-30 mt-50 pr-20 fw-semi-bold fs-16">
+          <h4 class="m-0 fs-14">Capacity</h4>
+        </div>
+        <form class="types d-flex" action="">
+          <div>
+            <input type="checkbox" name="two-persons" id="two-persons">
+            <label for="two-persons">2 Persons</label>
+          </div>
+          <div>
+            <input type="checkbox" name="four-persons" id="four-persons">
+            <label for="four-persons">4 Persons</label>
+          </div>
+          <div>
+            <input type="checkbox" name="six-persons" id="six-persons">
+            <label for="six-persons">6 Persons</label>
+          </div>
+          <div>
+            <input type="checkbox" name="eight-or-more" id="eight-or-more">
+            <label for="eight-or-more">8 or More</label>
+          </div>
+        </form>
+        <div class="cars-list mb-30 mt-50 pr-20 fw-semi-bold fs-16">
+          <h4 class="m-0 fs-14">Price</h4>
+        </div>
+        <form action="">
+          <input class="slider" type="range" name="price" min="72" max="110" step="2" value="100" oninput="slider()">
+          <p class="slider-value fs-20 fw-semi-bold">Max: $100.00</p>
+        </form>
+      </aside>
+      <main class="car-page p-40">
+        <div class="car-info d-flex gap-20">
+          <div class="images">
+            <div class="main-image rad-10 mb-15">
+              <h2 class="m-0 fs-32 fw-semi-bold"><span class="category">Sports</span> car with the best<br>design and acceleration</h2>
+              <p class="fs-16">Safety and comfort while driving a<br>futuristic and elegant <span class="category">sports</span> car</p>
+              <div class="image w-full txt-c"><img class="car-pic" alt="car"></div>
+            </div>
+            <div class="secondary-images between-flex gap-30">
+              <div class="image"><img class="view-1" src="imgs/view-1.png" alt="view-1"></div>
+              <div class="image"><img class="view-2" src="imgs/view-2.png" alt="view-2"></div>
+              <div class="image"><img class="view-1" src="imgs/view-1.png" alt="view-3"></div>
+            </div>
+          </div>
+          <div class="info pl-50 pr-50 pt-30 pb-30 rad-10">
+            <div class="title between-flex mb-10">
+              <h3 class="fs-32 fw-bold m-0 car-name">Nissan GTR</h3><i class="fa-regular fa-heart fs-20 heart fs-24"></i>
+            </div>
+            <div class="reviews d-flex align-center gap-10">
+              <div class="stars"><i class="fa-solid fa-star fs-20 mr-5"></i><i class="fa-solid fa-star fs-20 mr-5"></i><i class="fa-solid fa-star fs-20 mr-5"></i><i class="fa-solid fa-star fs-20 mr-5"></i><i class="fa-regular fa-star fs-20"></i>
+              </div>
+              <p>440+ Reviewer</p>
+            </div>
+            <p class="fs-20 mb-30">NISMO has become the embodiment of <span class="car-name">Nissan's</span> outstanding performance, inspired by the most unforgiving proving ground, the "race track".</p>
+            <div class="info-one between-flex gap-30 mb-20">
+              <div class="between-flex fs-18"><span>Type Car</span><span class="category"></span></div>
+              <div class="between-flex fs-18"><span>Capacity</span><span class="capacity"></span></div>
+            </div>
+            <div class="info-two between-flex gap-30">
+              <div class="between-flex fs-18"><span>Steering</span><span class="steering-wheel"></span></div>
+              <div class="between-flex fs-18"><span>Gasoline</span><span class="gas"></span></div>
+            </div>
+            <div class="price-info between-flex mt-54">
+              <div class="price after-discount"><span class="fs-18 fw-bold p-relative d-block mb-3 price p-relative fs-22 mb-5"></span></div><a class="fs-16 rad-5" href="#">Rent Now</a>
+            </div>
+          </div>
+        </div>
+        <h4 class="p-relative fs-20 fw-semi-bold">Reviews</h4>
+        <div class="comments mt-40">
+          <div class="comment d-flex gap-20 p-20 rad-10">
+            <div class="image"><img src="imgs/Profile01.png" alt="profile-img"></div>
+            <div class="comment-info">
+              <div class="title between-flex mb-10"><span class="name fs-20 fw-bold fs-14">Alex Stanton</span><span class="date">22 July 2022</span></div>
+              <div class="review between-flex"><span class="job-title fs-14">CEO at Bukalapak</span>
+                <div class="stars"><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-regular fa-star fs-16"></i>
+                </div>
+              </div>
+              <p class="fs-14">We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
+            </div>
+          </div>
+          <div class="comment d-flex gap-20 mt-30 p-20 rad-10">
+            <div class="image"><img src="imgs/Profile02.png" alt="profile-img"></div>
+            <div class="comment-info">
+              <div class="title between-flex mb-10"><span class="name fs-20 fw-bold fs-14">Skylar Dias</span><span class="date">21 July 2022</span></div>
+              <div class="review between-flex"><span class="job-title fs-14">CEO at Amazon</span>
+                <div class="stars"><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-solid fa-star fs-16 mr-5"></i><i class="fa-regular fa-star fs-16"></i>
+                </div>
+              </div>
+              <p class="fs-14">We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cars-list between-flex mb-30 mt-50 pl-20 pr-20 fw-semi-bold fs-16">
+          <h4 class="m-0">Recent Cars</h4><a href="#">View All</a>
+        </div>
+        <div class="list d-grid gap-30"></div>
+      </main>
+    </div>
+    <footer class="bg-white pt-80 pb-50">
+      <div class="container">
+        <div class="top d-grid gap-30">
+          <div class="info">
+            <h2 class="logo">MORENT</h2>
+            <p class="mt-25 fw-semi-bold">Our vision is to provide convenience<br>and help increase your sales business.</p>
+          </div>
+          <div class="links">
+            <h2 class="mt-0 mb-50 fs-20 fw-semi-bold">About</h2>
+            <ul>
+              <li class="pb-35"><a href="#">How it works</a></li>
+              <li class="pb-35"><a href="#">Featured</a></li>
+              <li class="pb-35"><a href="#">Partnership</a></li>
+              <li class="pb-35"><a href="#">Bussiness Relation</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2 class="mt-0 mb-50 fs-20 fw-semi-bold">Community</h2>
+            <ul>
+              <li class="pb-35"><a href="#">Events</a></li>
+              <li class="pb-35"><a href="#">Blog</a></li>
+              <li class="pb-35"><a href="#">Podcast</a></li>
+              <li class="pb-35"><a href="#">Invite a friend</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2 class="mt-0 mb-50 fs-20 fw-semi-bold">Social</h2>
+            <ul>
+              <li class="pb-35"><a href="#">Discord</a></li>
+              <li class="pb-35"><a href="#">Instagram</a></li>
+              <li class="pb-35"><a href="#">Twitter</a></li>
+              <li class="pb-35"><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom between-flex mt-30">
+          <p class="copyright fw-semi-bold">&copy; <span class="year"></span> MORENT.All rights reserved</p>
+          <div><a class="mr-40 fw-semi-bold" href="#">Privacy &amp; Policy</a><a class="fw-semi-bold" href="#">Terms &amp; Condition</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="src/main.js"></script>
+  </body>
+</html>

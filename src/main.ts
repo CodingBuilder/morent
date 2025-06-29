@@ -320,7 +320,9 @@ for (let i = 0; i < carsData.length; i++) {
       carInfoPrice?.appendChild(discount);
     }
 
-    infoSection.dataset.car = carsData[i].carName;
+    if (infoSection) {
+      infoSection.dataset.car = carsData[i].carName;
+    }
   }
 }
 
@@ -347,8 +349,95 @@ function changeView(): void {
   }
 }
 
-addEventListener("resize", changeView);
-addEventListener("load", changeView);
+if (viewOne && viewTwo) {
+  addEventListener("resize", changeView);
+  addEventListener("DOMContentLoaded", changeView);
+}
+
+const commentOne = document.querySelectorAll(".comments .comment .comment-info p")[0] as HTMLParagraphElement;
+const commentTwo = document.querySelectorAll(".comments .comment .comment-info p")[1] as HTMLParagraphElement;
+
+const originalTextOne = commentOne.textContent;
+const originalTextTwo = commentTwo.textContent;
+
+function changeTextLength(text: string, chars: number): string {
+  if (text.length <= chars) throw Error("The Text Length Is Smaller Than The Given Chars");
+
+  let newText: string = "";
+  for (let i = 0; i < chars; i++) {
+    newText += text[i];
+  }
+
+  newText += "...";
+  return newText;
+} 
+
+if (commentOne && commentTwo) {
+  addEventListener("DOMContentLoaded", () => {
+    if (innerWidth <= 768) {
+      let shortTextOne = changeTextLength(commentOne.textContent || "", 80);
+      let shortTextTwo = changeTextLength(commentTwo.textContent || "", 80);
+
+      commentOne.textContent = shortTextOne;
+      commentTwo.textContent = shortTextTwo;
+    } else {
+      let largeTextOne = originalTextOne;
+      let largeTextTwo = originalTextTwo;
+
+      commentOne.textContent = largeTextOne;
+      commentTwo.textContent = largeTextTwo;
+    }
+  });
+
+  addEventListener("resize", () => {
+    if (innerWidth <= 768) {
+      let shortTextOne = changeTextLength(commentOne.textContent || "", 80);
+      let shortTextTwo = changeTextLength(commentTwo.textContent || "", 80);
+
+      commentOne.textContent = shortTextOne;
+      commentTwo.textContent = shortTextTwo;
+    } else {
+      let largeTextOne = originalTextOne;
+      let largeTextTwo = originalTextTwo;
+
+      commentOne.textContent = largeTextOne;
+      commentTwo.textContent = largeTextTwo;
+    }
+  });
+}
+
+// function changeCommentText(): void {
+//   let mobileTextOne = "We are very happy with the service from the MORENT App. Morent has a low price...";
+//   let largeTextOne = "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.";
+  
+//   let mobileTextTwo = "We are greatly helped by the services of the MORENT Application. Morent has a low...";
+//   let largeTextTwo = "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite."
+  
+//   window.addEventListener("DOMContentLoaded", () => {
+//     if (window.innerWidth <= 768) {
+//       commentOne.textContent = mobileTextOne;
+//       commentTwo.textContent = mobileTextTwo;
+//     } else {
+//       commentOne.textContent = largeTextOne;
+//       commentTwo.textContent = largeTextTwo;
+//     }
+//   });
+
+//   window.addEventListener("resize", () => {
+//     if (window.innerWidth <= 768) {
+//       console.log(commentOne);
+//       commentOne.textContent = mobileTextOne;
+//       commentTwo.textContent = mobileTextTwo;
+//     } else {
+//       commentOne.textContent = largeTextOne;
+//       commentTwo.textContent = largeTextTwo;
+//     }
+//   });
+// }
+
+// if (commentOne && commentTwo) {
+//   changeCommentText();
+// }
 
 addEventListener("load", () => {
   checkNoFavourites();
@@ -498,17 +587,19 @@ const billCarImg = document.querySelector(".summary .info .image img") as HTMLIm
 const billCarName = document.querySelector(".summary .info div .name") as HTMLImageElement;
 const price = document.querySelectorAll(".summary .car-price") as NodeListOf<HTMLSpanElement>;
 
-addEventListener("DOMContentLoaded", () => {
-  for (let i = 0; i < carsData.length; i++) {
-    if (carsData[i].id === billIdParam) {
-      if (billCarImg) billCarImg.src = carsData[i].mobileImg;
-      billCarName.textContent = carsData[i].carName;
-      price.forEach((carPrice) => {
-        carPrice.textContent = `$${carsData[i].price}`;
-      });
+if (billCarImg && billCarName && price) {
+  addEventListener("DOMContentLoaded", () => {
+    for (let i = 0; i < carsData.length; i++) {
+      if (carsData[i].id === billIdParam) {
+        if (billCarImg) billCarImg.src = carsData[i].mobileImg;
+        billCarName.textContent = carsData[i].carName;
+        price.forEach((carPrice) => {
+          carPrice.textContent = `$${carsData[i].price}`;
+        });
+      }
     }
-  }
-});
+  });
+}
 
 const paymentMethods = document.querySelectorAll<HTMLInputElement>(".billing-info .payment-method .method input[type='radio']");
 
