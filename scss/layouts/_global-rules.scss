@@ -1,0 +1,61 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+// Import Colors
+@use "./scss/variables/colors" as *;
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #F6F7F9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: auto;
+  @include media("small") {
+    width: 95%;
+  }
+  @include media("medium") {
+    width: 90%;
+  }
+  @include media("large") {
+    width: 93%;
+  }
+}
+
+.logo {
+  color: $blue-default;
+  font-size: 32px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.title {
+  i {
+    cursor: pointer;
+    &.favourite {
+      color: #ED3F3F;
+    }
+    &.remove {
+      color: rgba(19 19 19 / 60%);
+    }
+  }
+}

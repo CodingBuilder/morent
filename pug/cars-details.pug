@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+  include includes/_pageHead
+  body 
+    include includes/variables/_links
+    include includes/sections/_header
+    div(class="details-page d-flex")
+      include includes/sections/_aside
+      main
+        include includes/sections/_customize
+        include includes/sections/_cars
+    include includes/sections/_footer
+    script(src="src/main.js")

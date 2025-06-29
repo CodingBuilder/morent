@@ -1,0 +1,826 @@
+// Import Global Rules
+@use "./layouts/global-rules";
+
+// Import Mixins
+@use "./helpers/mixins" as *;
+
+// Import Colors
+@use "./variables/colors" as *;
+
+// Import Sections
+@use "./layouts/header";
+@use "./layouts/footer";
+@use "./layouts/aside";
+
+main {
+  .container {
+    .ads {
+      .ad {
+        width: 49%;
+        height: 430px;
+        color: white;
+        padding: 20px 30px;
+        &.first {
+          background-color: $info-500;
+          a {
+            background-color: $blue-600;
+          }
+          @media (max-width: 1200px) {
+            img {
+              width: 380px;
+            }
+          }
+          @media (max-width: 992px) {
+            width: 100%;
+            img {
+              width: 470px;
+              margin: 0;
+            }
+          }
+          @include media("mobile") {
+            img {
+              width: 270px;
+              margin-bottom: 10px;
+            }
+          } 
+        }
+        &.second {
+          background-color: $blue-600;
+          a {
+            background-color: $info-500;
+          }
+          @media (max-width: 1200px) {
+            img {
+              width: 310px;
+            }
+          }
+          @media (max-width: 992px) {
+            display: none;
+          }
+        }
+        h2 {
+          line-height: 1.7;
+        }
+        p {
+          line-height: 1.5;
+        }
+        a {
+          padding: 12px 20px;
+          color: white;
+          @media (max-width: 992px) {
+            padding: 20px 40px;
+          }
+        }
+        @media (max-width: 1200px) {
+          img {
+            margin-top: 35px;
+          }
+        }
+        @include media("mobile") {
+          height: 330px;
+          h2 {
+            font-size: 16px;
+          }
+          p, a {
+            font-size: 12px;
+          }
+          .image {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+  .customization {
+    > div:not(.switch) {
+      width: 44%;
+      background-color: white;
+      padding: {
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 50px;
+      }
+      h3::before {
+        content: "";
+        position: relative;
+        width: 9px;
+        height: 9px;
+        display: block;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      @media (max-width: 992px) {
+        width: 100%;
+        padding: {
+          top: 20px;
+          right: 10px;
+          bottom: 20px;
+          left: 10px;
+        }
+      }
+      @include media("mobile") {
+        padding: {
+          right: 20px;
+          left: 20px;
+        }
+      }
+    }
+    .pick-up {
+      h3::before {
+        background-color: $blue-600;
+        border: 4px $blue-200 solid;
+      }
+    }
+    .switch {
+      background-color: $blue-500;
+      box-shadow: 0 0 50px #888888;
+      transition: .3s;
+      cursor: pointer;
+      &:hover {
+        background-color: $blue-600;
+      }
+      i {
+        color: white;
+      }
+      @media (max-width: 992px) {
+        position: absolute;
+        top: 113.5px;
+      }
+      @include media("mobile") {
+        top: 298.5px;
+      }
+    }
+    .drop-off {
+      h3::before {
+        background-color: $info-500;
+        border: 4px $info-200 solid;
+      }
+    }
+    .options {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      .option {
+        padding-right: 30px;
+        &:not(:last-child) {
+          border-right: 1px $secondary-300 solid;
+          @include media("mobile") {
+            border: none;
+          }
+        }
+        .select {
+          cursor: pointer;
+          span {
+            color: $secondary-300;
+          }
+          i {
+            @include media("mobile") {
+              font-size: 10px;
+            }
+          }
+        }
+        @include media("mobile") {
+          padding-right: 0;
+        }
+      }
+      @media (max-width: 1450px) {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+      @media (max-width: 1240px) {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+      @media (max-width: 1140px) {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      }
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      @include media("mobile") {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-top: 30px;
+      }
+    }
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+    @include media("mobile") {
+      gap: 110px;
+    }
+  }
+  .cars-list {
+    h4 {
+      color: $secondary-300;
+    }
+    a {
+      color: $blue-500;
+    }
+  }
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    .card {
+      transition: .3s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      > span {
+        color: $secondary-300;
+      }
+      .info {
+        color: $secondary-300;
+        > div {
+          i {
+            margin-right: 7px;
+          }
+        }
+      }
+      .price-info {
+        .price::after {
+          content: "day";
+          position: relative;
+          margin-left: 5px;
+          font-size: 14px;
+          color: $secondary-300;
+        }
+        .after-discount {
+          .discount {
+            color: $secondary-300;
+            text-decoration: line-through;
+          }
+        }
+        a {
+          background-color: $blue-600;
+          color: white;
+          padding: 12px 20px;
+        }
+      }
+    }
+  }
+  .recomendation-cars {
+    .major {
+      @include media("mobile") {
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 180px;
+        }
+      }
+      .info {
+        @include media("mobile") {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 25px;
+          font-size: 14px;
+        }
+      }
+    }
+    @include media("mobile") {
+      grid-template-columns: minmax(200px, 1fr);
+    }
+  }
+  .show-more {
+    justify-content: flex-end;
+    a {
+      background-color: $blue-600;
+      color: white;
+      padding: 12px 20px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    span {
+      color: $secondary-300;
+      position: relative;
+    }
+  }
+}
+
+.favourite-page {
+  .container {
+    .favourite-cars {
+      .card {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &.hide {
+        display: none;
+      }
+    }
+    .no-favourites {
+      color: $secondary-400;
+      letter-spacing: -1px;
+      word-spacing: 3px;
+      text-align: center;
+      &.show {
+        display: block;
+      }
+      @media (max-width: 992px) {
+        font-size: 30px;
+      }
+      @include media("mobile") {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.details-page {
+  main {
+    flex-grow: 1;
+    padding: 30px;
+    .recomendation-cars {
+      margin-top: 60px;
+    }
+  }
+}
+
+main.car-page {
+  .car-info {
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    > div {
+      flex: 1;
+    }
+    .images {
+      .main-image {
+        width: 100%;
+        color: white;
+        padding: 20px 30px;
+        background-color: $blue-600;
+        height: 395px;
+        h2 {
+          line-height: 1.7;
+          @include media("mobile") {
+            font-size: 16px;
+          }
+        }
+        p {
+          line-height: 1.5;
+        }
+        .image {
+          margin-top: 60px;
+          .car-pic {
+            width: 300px;
+            @media (max-width: 1200px) {
+                margin-top: 35px;
+            }
+            @include media("mobile") {
+              width: 200px;
+            }
+          }
+        }
+      }
+      .secondary-images {
+        @include media("mobile") {
+          gap: 0;
+        }
+      }
+    }
+    .info {
+      background-color: white;
+      h3 {
+        color: $secondary-500;
+      }
+      .reviews {
+        .stars {
+          i:not(:last-of-type) {
+            color: #FBAD39;
+          }
+          i {
+            @include media('mobile') {
+              font-size: 12px;
+            }
+          }
+        }
+        p {
+          color: $secondary-400;
+          @include media("mobile") {
+            font-size: 12px;
+            margin: 5px 0 0;
+          }
+        }
+      }
+      > p {
+        color: $secondary-400;
+        line-height: 2;
+        @media (max-width: 992px)  {
+          font-size: 16px;
+        }
+        @include media("mobile")  {
+          font-size: 12px;
+        }
+      }
+      .info-one, .info-two {
+        > div {
+          flex: 1;
+          span:first-of-type {
+            color: $secondary-300;
+          }
+          span:last-of-type {
+            color: $secondary-400;
+          }
+          span {
+            @include media("mobile") {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .price-info {
+        .price {
+          span:first-of-type {
+            &::after {
+              content: "day";
+              position: relative;
+              margin-left: 5px;
+              font-size: 14px;
+              color: $secondary-300;
+            }
+            @include media("mobile") {
+              font-size: 18px;
+            }
+          }
+          .discount {
+            color: $secondary-300;
+            text-decoration: line-through;
+          }
+        }
+        a {
+          background-color: $blue-600;
+          color: white;
+          padding: 14px 28px;
+        }
+      }
+      @media (max-width: 992px) {
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  > h4 {
+    &::after {
+      content: "13";
+      position: relative;
+      background-color: $blue-500;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 7px;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+    @include media("mobile") {
+      background-color: white;
+      margin: 0;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  .comments {
+    .comment {
+      background-color: white;
+      .image {
+        img {
+          @include media("mobile") {
+            width: 45px;
+          }
+        }
+      }
+      .comment-info {
+        flex: 1;
+        .title {
+          .name {
+            color: $secondary-500;
+            @include media("mobile") {
+              font-size: 16px;
+            }
+          }
+          .date {
+            color: $secondary-300;
+            @include media("mobile") {
+              font-size: 12px;
+            }
+          }
+        }
+        .review {
+          .job-title {
+            color: $secondary-300;
+            @include media("mobile") {
+              font-size: 12px;
+            }
+          }
+          .stars {
+            i:not(:last-of-type) {
+              color: #FBAD39;
+            }
+            i {
+              @include media("mobile") {
+                font-size: 12px;
+                margin-bottom: 2px;
+              }
+            }
+          }
+        }
+        > p {
+          color: $secondary-400;
+          line-height: 2;
+          @include media("mobile") {
+            font-size: 12px;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    @include media("mobile") {
+      background-color: white;
+      margin-top: 0;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    @include media("mobile") {
+      grid-template-columns: minmax(200px, 1fr);
+    }
+  }
+}
+
+.page {
+  .heading {
+    h2 {
+      color: $secondary-500;
+    }
+    .steps {
+      color: $secondary-300;
+      span:first-of-type {
+        line-height: 1.4;
+      }
+      span:last-of-type {
+        @media (max-width: 750px) {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+        }
+      }
+    }
+    &.bottom {
+      .steps {
+        span:last-of-type {
+          @media (max-width: 750px) {
+            position: static;
+          }
+        }
+      }
+    }
+  }
+  .billing-info {
+    flex: 1;
+    > div {
+      background-color: white;
+    }
+    .user-info {
+      form {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        column-gap: 40px;
+        row-gap: 30px;
+        label {
+          color: $secondary-500;
+        }
+        input {
+          background-color: #F6F7F9;
+          color: $secondary-300;
+          border: none;
+          outline: none;
+          &::placeholder {
+            color: $secondary-300;
+          }
+        }
+        @media (max-width: 1200px) {
+          grid-template-columns: minmax(200px, 1fr);
+        }
+      }
+    }
+    .rental-info {
+      > {
+        h3::before {
+          content: "";
+          position: relative;
+          width: 9px;
+          height: 9px;
+          display: block;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        h3.pick-up::before {
+          background-color: $blue-600;
+          border: 4px $blue-200 solid;
+        }
+        h3.drop-off::before {
+          background-color: $info-500;
+          border: 4px $info-200 solid;
+        }
+      } 
+      form {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        column-gap: 40px;
+        row-gap: 30px;
+        label {
+          color: $secondary-500;
+        }
+        select {
+          appearance: none;
+          background-color: #F6F7F9;
+          border: none;
+          outline: none;
+          color: $secondary-300;
+        }
+        @media (max-width: 1200px) {
+          grid-template-columns: minmax(200px, 1fr);
+        }
+      }
+    }
+    .payment-method {
+      form {
+        .method {
+          padding: 20px 30px;
+          background-color: #F6F7F9;
+          input[type="radio"] {
+            appearance: none;
+            background-color: white;
+            border: 3px #F6F7F9 solid;
+            outline: 1px $secondary-300 solid;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            cursor: pointer;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-radius: 50%;
+              background-color: $secondary-300;
+              transition: .3s;
+            }
+            &:checked::before {
+              width: 100%; 
+              height: 100%; 
+            }
+          }
+          .payment-field {
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            column-gap: 40px;
+            row-gap: 30px;
+            input {
+              background-color: white;
+              color: $secondary-300;
+              border: none;
+              outline: none;
+              &::placeholder {
+                color: $secondary-300;
+              }
+            }
+            @media (max-width: 1200px) {
+              grid-template-columns: minmax(200px, 1fr);
+            }
+          }
+        }
+      }
+    }
+    .confirmation {
+      form {
+        > div {
+          padding: 20px 30px;
+          background-color: #F6F7F9;
+        }
+        input {
+          appearance: none;
+          width: 24px;
+          height: 24px;
+          border-radius: 5px;
+          border: 1px $secondary-300 solid;
+          &::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: white;
+            background-color: $secondary-300;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+            @media (max-width: 750px) {
+              font-size: 10px;
+            }
+          }
+          &:checked::before {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+          }
+          & + label {
+            line-height: 1.6;
+            @media (max-width: 750px) {
+              font-size: 12px;
+              flex-basis: 50%;
+              flex-grow: 1;
+            }
+          }
+          @include media("mobile") {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+      > a {
+        color: white;
+        background-color: $blue-500;
+        
+      }
+    }
+  }
+  .summary {
+    background-color: white;
+    > p {
+      color: $secondary-300;
+      line-height: 1.6;
+      width: 90%;
+    }
+    .info {
+      align-items: center;
+      border-bottom: 1px #C3D4E9 solid;
+      .image {
+        background-color: $blue-600;
+      }
+      div p {
+        i:not(:last-of-type) {
+          color: #FBAD39;
+        }
+      }
+      @include media("mobile") {
+        flex-direction: column;
+      }
+    }
+    .price-info {
+      span:first-child {
+        color: $secondary-300;
+      }
+      span:last-child {
+        color: $secondary-500;
+      }
+    }
+    .code {
+      input {
+        outline: none;
+        border: none;
+        background-color: #F6F7F9;
+      }
+      button {
+        right: 20px;
+        top: calc(50% + 15px);
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .total-price {
+      .text {
+        h4 {
+          color: $secondary-500;
+          @media (max-width: 1200px) {
+            font-size: 16px;
+          }
+        }
+        p {
+          color: $secondary-300;
+          @media (max-width: 1200px) {
+            font-size: 12px;
+          }
+        }
+      }
+      > span {
+        @media (max-width: 1200px) {
+          font-size: 20px;
+        }
+      }
+    }
+    @media (max-width: 1200px) {
+      order: -1;
+    }
+  }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+}

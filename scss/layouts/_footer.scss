@@ -1,0 +1,43 @@
+// Import Mixins
+@use "./scss/helpers/mixins" as *;
+
+// Import Colors
+@use "./scss/variables/colors" as *;
+
+footer {
+  .top {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    border-bottom: 1px rgba(19 19 19 / 16%) solid;
+    .info {
+      grid-column: span 3;
+      p {
+        color: rgba(19 19 19 / 60%);
+        line-height: 1.5;
+      }
+      @media (max-width: 992px) {
+        grid-column: span 1;
+      }
+    }
+    .links {
+      ul {
+        a {
+          color: rgba(19 19 19 / 60%);
+        }
+      }
+    }
+  }
+  @include media("mobile") {
+    text-align: center;
+  }
+  .bottom {
+    color: $secondary-500;
+    div {
+      a {
+        color: $secondary-500;
+      }
+    }
+    @include media("mobile") {
+      flex-direction: column;
+    }
+  }
+}

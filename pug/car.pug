@@ -1,0 +1,88 @@
+doctype html
+html(lang="en")
+  include includes/_pageHead
+  body 
+    include includes/variables/_links
+    include includes/sections/_header
+    div(class="details-page d-flex")
+      include includes/sections/_aside
+      main.car-page.p-40
+        div(class="car-info d-flex gap-20")
+          div(class="images")
+            div(class="main-image rad-10 mb-15")
+              h2(class="m-0 fs-32 fw-semi-bold") #[span.category Sports] car with the best#[br]design and acceleration
+              p.fs-16 Safety and comfort while driving a#[br]futuristic and elegant #[span.category sports] car
+              div(class="image w-full txt-c")
+                img(alt="car" class="car-pic")
+            div(class="secondary-images between-flex gap-30")
+              div(class="image")
+                img(src="imgs/view-1.png", alt="view-1" class="view-1")
+              div(class="image")
+                img(src="imgs/view-2.png", alt="view-2" class="view-2")
+              div(class="image")
+                img(src="imgs/view-1.png", alt="view-3" class="view-1")
+          div(class="info pl-50 pr-50 pt-30 pb-30 rad-10")
+            div(class="title between-flex mb-10")
+              h3.fs-32.fw-bold.m-0.car-name Nissan GTR
+              i(class="fa-regular fa-heart fs-20 heart fs-24")
+            div(class="reviews d-flex align-center gap-10")
+              div(class="stars")
+                - for (var x = 0; x < 4; x++)
+                  i(class="fa-solid fa-star fs-20 mr-5")
+                i(class="fa-regular fa-star fs-20")
+              p 440+ Reviewer
+            p.fs-20.mb-30 NISMO has become the embodiment of #[span.car-name Nissan's] outstanding performance, inspired by the most unforgiving proving ground, the "race track".
+            div(class="info-one between-flex gap-30 mb-20")
+              div(class="between-flex fs-18")
+                span Type Car
+                span.category
+              div(class="between-flex fs-18")
+                span Capacity
+                span.capacity
+            div(class="info-two between-flex gap-30")
+              div(class="between-flex fs-18")
+                span Steering
+                span.steering-wheel
+              div(class="between-flex fs-18")
+                span Gasoline
+                span.gas
+            div(class="price-info between-flex mt-54")
+                div(class="price after-discount")
+                  span(class="fs-18 fw-bold p-relative d-block mb-3 price p-relative fs-22 mb-5")
+                a(href="#" class="fs-16 rad-5") Rent Now
+        h4.p-relative.fs-20.fw-semi-bold Reviews
+        div(class="comments mt-40")
+          div(class="comment d-flex gap-20 p-20 rad-10")
+            div(class="image")
+              img(src="imgs/profile01.png", alt="profile-img")
+            div(class="comment-info")
+              div(class="title between-flex mb-10")
+                span(class="name fs-20 fw-bold fs-14") Alex Stanton
+                span(class="date") 22 July 2022
+              div(class="review between-flex")
+                span(class="job-title fs-14") CEO at Bukalapak
+                div(class="stars")
+                  - for (var x = 0; x < 4; x++)
+                    i(class="fa-solid fa-star fs-16 mr-5")
+                  i(class="fa-regular fa-star fs-16")
+              p.fs-14 We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.
+          div(class="comment d-flex gap-20 mt-30 p-20 rad-10")
+            div(class="image")
+              img(src="imgs/profile02.png", alt="profile-img")
+            div(class="comment-info")
+              div(class="title between-flex mb-10")
+                span(class="name fs-20 fw-bold fs-14") Skylar Dias
+                span(class="date") 21 July 2022
+              div(class="review between-flex")
+                span(class="job-title fs-14") CEO at Amazon
+                div(class="stars")
+                  - for (var x = 0; x < 4; x++)
+                    i(class="fa-solid fa-star fs-16 mr-5")
+                  i(class="fa-regular fa-star fs-16")
+              p.fs-14 We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.
+        div(class="cars-list between-flex mb-30 mt-50 pl-20 pr-20 fw-semi-bold fs-16")
+          h4(class="m-0") Recent Cars
+          a(href="#") View All
+        div(class="list d-grid gap-30")
+    include includes/sections/_footer
+    script(src="src/main.js")

@@ -1,0 +1,60 @@
+include ../variables/_allCars
+div(class="recomendation-cars list d-grid gap-30")
+  - for (var i = 0; i < cars.length; i++)
+    if (cars[i].discount)
+      div(class="card car rad-10 bg-white p-20", data-car=cars[i].name, data-category=cars[i].category, data-largeimg="imgs/" + cars[i].largeImg, data-mobileimg="imgs/" + cars[i].mobileImg, data-gas=cars[i].gas, data-steeringwheel=cars[i].steeringWheel, data-passengers=cars[i].passengers, data-price=cars[i].price, data-discount=cars[i].discount, data-id=cars[i].number)
+        div(class="title between-flex")
+          h3(class="m-0") #{cars[i].name}
+          i(class="fa-regular fa-heart fs-20 heart")
+        span(class="catagory d-block mt-10 fs-14 fw-bold") #{cars[i].category}
+        div(class="major")
+          div(class="car-image txt-c mt-50 mb-60")
+            img(src="imgs/" + cars[i].largeImg, alt=cars[i].name data-mobileimg="imgs/" + cars[i].mobileImg data-largeimg="imgs/" + cars[i].largeImg)
+          div(class="info between-flex fs-17")
+            div(class="gasoline-info")
+              i(class="fa-solid fa-gas-pump")
+              span #{cars[i].gas}L
+            div(class="Steering-wheel-info")
+              i(class="fa-solid fa-car")
+              span #{cars[i].steeringWheel}
+            div(class="passengers-info")
+              i(class="fa-solid fa-users")
+              span #{cars[i].passengers} People
+        div(class="price-info between-flex mt-25")
+          if (cars[i].discount)
+            div(class="after-discount")
+              span(class="fs-18 fw-bold p-relative d-block mb-3 price") $#{cars[i].price}/
+              span(class="discount fs-12 fw-bold") $#{cars[i].discount}
+          else
+            span(class="fs-18 fw-bold p-relative price") $#{cars[i].price}/
+          a(href="car.html?id=" + cars[i].number class="rad-3 d-block w-fit") Rent Now
+    else
+      div(class="card car rad-10 bg-white p-20", data-car=cars[i].name, data-category=cars[i].category, data-largeimg="imgs/" + cars[i].largeImg, data-mobileimg="imgs/" + cars[i].mobileImg, data-gas=cars[i].gas, data-steeringwheel=cars[i].steeringWheel, data-passengers=cars[i].passengers, data-price=cars[i].price, data-id=cars[i].number)
+        div(class="title between-flex")
+          h3(class="m-0") #{cars[i].name}
+          if (cars[i].loved)
+            i(class="fa-solid fa-heart fs-20 heart favourite")
+          else
+            i(class="fa-regular fa-heart fs-20 heart")
+        span(class="catagory d-block mt-10 fs-14 fw-bold") #{cars[i].category}
+        div(class="major")
+          div(class="car-image txt-c mt-50 mb-60")
+            img(src="imgs/" + cars[i].largeImg, alt=cars[i].name data-mobileimg="imgs/" + cars[i].mobileImg data-largeimg="imgs/" + cars[i].largeImg)
+          div(class="info between-flex fs-17")
+            div(class="gasoline-info")
+              i(class="fa-solid fa-gas-pump")
+              span #{cars[i].gas}L
+            div(class="Steering-wheel-info")
+              i(class="fa-solid fa-car")
+              span #{cars[i].steeringWheel}
+            div(class="passengers-info")
+              i(class="fa-solid fa-users")
+              span #{cars[i].passengers} People
+        div(class="price-info between-flex mt-25")
+          if (cars[i].discount)
+            div(class="after-discount")
+              span(class="fs-18 fw-bold p-relative d-block mb-3 price") $#{cars[i].price}/
+              span(class="discount fs-12 fw-bold") $#{cars[i].discount}
+          else
+            span(class="fs-18 fw-bold p-relative price") $#{cars[i].price}/
+          a(href="car.html?id=" + cars[i].number class="rad-3 d-block w-fit") Rent Now

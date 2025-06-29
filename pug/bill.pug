@@ -1,0 +1,173 @@
+doctype html
+html(lang="en")
+  include includes/_pageHead
+  body 
+    include includes/variables/_links
+    include includes/sections/_header
+    div(class="page d-flex gap-30 p-30")
+      div(class="billing-info")
+        div(class="user-info rad-10 p-30 mb-40 p-relative")
+          .heading
+            h2.fs-20.fw-bold.mt-0.mb-10 Billing Info
+            div(class="steps between-flex mb-35")
+              span.fs-14 Please enter your billing info
+              span.fs-14 Step 1 of 4
+          form(action="" class="d-grid")
+            div(class="info-input")
+              label(for="user-name" class="d-block mb-15 fw-semi-bold") Name
+              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-name")
+            div(class="info-input")
+              label(for="phone-number" class="d-block mb-15 fw-semi-bold") Phone Number
+              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="phone-number")
+            div(class="info-input")
+              label(for="user-address" class="d-block mb-15 fw-semi-bold") Address
+              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-address")
+            div(class="info-input")
+              label(for="user-city" class="d-block mb-15 fw-semi-bold") Town / City
+              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-city")
+        div(class="rental-info rad-10 p-30 mb-40 p-relative")
+          .heading
+            h2.fs-20.fw-bold.mt-0.mb-10 Rental Info
+            div(class="steps between-flex")
+              span.fs-14 Please select your rental date
+              span.fs-14 Step 2 of 4
+          h3.fw-semi-bold.p-relative.d-flex.align-center.mt-40.pick-up Pick - Up
+          form(action="" class="d-grid mt-30")
+            div(class="info-input")
+              label(for="locations" class="d-block mb-15 fw-semi-bold") Locations
+              select(name="location" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="locations")
+                option(disabled selected hidden) Select your city
+            div(class="info-input")
+              label(for="date" class="d-block mb-15 fw-semi-bold") Date
+              select(name="location" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="date")
+                option(disabled selected hidden) Select your date
+            div(class="info-input")
+              label(for="time" class="d-block mb-15 fw-semi-bold") Time
+              select(name="location" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="time")
+                option(disabled selected hidden) Select your time
+          h3.fw-semi-bold.p-relative.d-flex.align-center.mt-40.drop-off Drop - Off
+          form(action="" class="d-grid mt-30")
+            div(class="info-input")
+              label(for="locations" class="d-block mb-15 fw-semi-bold") Locations
+              select(name="location" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="locations")
+                option(disabled selected hidden) Select your city
+            div(class="info-input")
+              label(for="date" class="d-block mb-15 fw-semi-bold") Date
+              select(name="location" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="date")
+                option(disabled selected hidden) Select your date
+            div(class="info-input")
+              label(for="time" class="d-block mb-15 fw-semi-bold") Time
+              select(name="location" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="time")
+                option(disabled selected hidden) Select your time
+        div(class="payment-method rad-10 p-30 mb-40 p-relative")
+          .heading
+            h2.fs-20.fw-bold.mt-0.mb-10 Payment Method
+            div(class="steps between-flex")
+              span.fs-14 Please enter your payment method
+              span.fs-14 Step 3 of 4
+            form(class="mt-30")
+              div(class="method rad-10 mb-25")
+                div(class="between-flex")
+                  div(class="d-flex align-center choice")
+                    input(type="radio" id="visa" checked class="p-relative center-flex" name="payment")
+                    label(for="visa" class="fs-16 fw-semi-bold ml-15") Credit Card 
+                  img(src="imgs/visa.png", alt="visa")
+                div(class="d-grid mt-30 payment-field")
+                  div(class="info-input")
+                    label(for="card-number" class="d-block mb-15 fw-semi-bold") Card Number
+                    input(type="text" placeholder="Card number" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-number")
+                  div(class="info-input")
+                    label(for="expration-date" class="d-block mb-15 fw-semi-bold") Expration Date
+                    input(type="text" placeholder="DD/MM/YY" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="expration-date")
+                  div(class="info-input")
+                    label(for="card-holder" class="d-block mb-15 fw-semi-bold") Card Holder
+                    input(type="text" placeholder="Card holder" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-holder")
+                  div(class="info-input")
+                    label(for="cvc" class="d-block mb-15 fw-semi-bold") CVC
+                    input(type="text" placeholder="CVC" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="cvc")
+              div(class="method rad-10 mb-25")
+                div(class="between-flex")
+                  div(class="d-flex align-center choice")
+                    input(type="radio" id="paypal" class="p-relative center-flex" name="payment")
+                    label(for="paypal" class="fs-16 fw-semi-bold ml-15") PayPal 
+                  img(src="imgs/paypal.png", alt="PayPal")
+                div(class="d-grid mt-30 payment-field d-none")
+                  div(class="info-input")
+                    label(for="card-number" class="d-block mb-15 fw-semi-bold") Card Number
+                    input(type="text" placeholder="Card number" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-number")
+                  div(class="info-input")
+                    label(for="expration-date" class="d-block mb-15 fw-semi-bold") Expration Date
+                    input(type="text" placeholder="DD/MM/YY" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="expration-date")
+                  div(class="info-input")
+                    label(for="card-holder" class="d-block mb-15 fw-semi-bold") Card Holder
+                    input(type="text" placeholder="Card holder" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-holder")
+                  div(class="info-input")
+                    label(for="cvc" class="d-block mb-15 fw-semi-bold") CVC
+                    input(type="text" placeholder="CVC" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="cvc")
+              div(class="method rad-10 mb-25")
+                div(class="between-flex")
+                  div(class="d-flex align-center choice")
+                    input(type="radio" id="bitcoin" class="p-relative center-flex" name="payment")
+                    label(for="bitcoin" class="fs-16 fw-semi-bold ml-15") Bitcoin 
+                  img(src="imgs/bitcoin.png", alt="bitcoin")
+                div(class="d-grid mt-30 payment-field d-none")
+                  div(class="info-input")
+                    label(for="card-number" class="d-block mb-15 fw-semi-bold") Card Number
+                    input(type="text" placeholder="Card number" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-number")
+                  div(class="info-input")
+                    label(for="expration-date" class="d-block mb-15 fw-semi-bold") Expration Date
+                    input(type="text" placeholder="DD/MM/YY" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="expration-date")
+                  div(class="info-input")
+                    label(for="card-holder" class="d-block mb-15 fw-semi-bold") Card Holder
+                    input(type="text" placeholder="Card holder" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-holder")
+                  div(class="info-input")
+                    label(for="cvc" class="d-block mb-15 fw-semi-bold") CVC
+                    input(type="text" placeholder="CVC" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="cvc")
+        div(class="confirmation rad-10 p-30 mb-40 p-relative")
+          .heading
+            h2.fs-20.fw-bold.mt-0.mb-10 Confirmation
+            div(class="steps between-flex")
+              span.fs-14 We are getting to the end. Just few clicks and your rental is ready!
+              span.fs-14 Step 4 of 4
+          form(action="" class="mt-30")
+            div(class="d-flex align-center mb-30 rad-10")
+              input(type="checkbox", name="agrements" id="sending" class="p-relative center-flex")
+              label(class="fw-semi-bold ml-20" for="sending") I agree with sending an Marketing and newsletter emails. No spam, promissed!
+            div(class="d-flex align-center rad-10")
+              input(type="checkbox", name="agrements" id="terms" class="p-relative center-flex")
+              label(class="fw-semi-bold ml-20" for="terms") I agree with our terms and conditions and privacy policy.
+          a(href="#" class="mt-40 fw-bold w-140 h-56 rad-10 center-flex") Rent Now
+          img(src="imgs/ic-security-safety.png", alt="sheild" class="mt-35 mb-30 d-block")
+          .heading.bottom
+            h2.fs-20.fw-bold.mt-0.mb-10 Confirmation
+            div(class="steps")
+              span.fs-14 We are getting to the end. Just few clicks and your rental is ready!
+      div(class="summary p-20 rad-10 h-fit")
+        h2.mt-0.mb-10.fs-20.fw-bold Rental Summary
+        p.mt-0.mb-30.fs-14 Prices may change depending on the length of the rental and the price of your rental car.
+        div(class="info d-flex gap-30 pb-40")
+          div(class="image p-20 w-fit h-125 rad-10 between-flex")
+            img(alt="car")
+          div
+            span(class="name d-block fs-32 fw-bold mb-10")
+            p
+              - for (var x = 0; x < 4; x++)
+                i(class="fa-solid fa-star fs-18 mr-5")
+              i(class="fa-regular fa-star fs-18")
+              span.fs-14.ml-10 440+ Reviewer
+        div(class="price-info subtotal between-flex mt-40")
+          span Subtotal
+          span.car-price.fw-semi-bold
+        div(class="price-info tax between-flex mt-30")
+          span Tax
+          span.fw-semi-bold $0
+        div(class="code p-relative")
+          input(type="text", name="promo-code", placeholder="Apply promo code" class="w-full pl-20 pr-20 pt-15 pb-15 rad-10 mt-30")
+          button.p-absolute Apply now
+        div(class="total-price between-flex mt-40 mb-10")
+          div(class="text")
+            h4.fs-20.fw-bold.mt-0.mb-5 Total Rental Price
+            p.fs-14.m-0 Overall price and includes rental discount
+          span.price.car-price.fs-32.fw-bold
+    include includes/sections/_footer
+    script(src="src/main.js")

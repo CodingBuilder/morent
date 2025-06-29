@@ -1,0 +1,189 @@
+// Padding Classes
+@for $i from 0 through 100 {
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+}
+
+// Margin Classes
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}
+@for $i from 0 through 100 {
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+}
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// border-radius Classes
+@for $i from 3 through 30 {
+  .rad-#{$i} {
+    border-radius: #{$i}px;
+  }
+}
+.rounded {
+  border-radius: 50%;
+}
+
+// Border Classes
+.b-none {
+  border: none;
+}
+
+// Width Classes
+@for $i from 1 through 1000 {
+  .w-#{$i} {
+    width: #{$i}px;
+  }
+}
+.w-full {
+  width: 100%;
+}
+.w-fit {
+  width: fit-content;
+}
+
+// Height Classes
+@for $i from 1 through 1000 {
+  .h-#{$i} {
+    height: #{$i}px;
+  }
+}
+.h-full {
+  height: 100%;
+}
+.h-fit {
+  height: fit-content;
+}
+
+// Display Classes
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-grid {
+  display: grid;
+}
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+
+// Gaps Classes
+@for $i from 1 through 100 {
+  .gap-#{$i} {
+    gap: #{$i}px;
+  }
+}
+
+// Grid System
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: percentage($i / 12);
+  }
+}
+
+// Font Size Classes
+@for $i from 10 through 80 {
+  .fs-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+// Font Weight Classes
+.fw-normal {
+  font-weight: normal;
+}
+.fw-semi-bold {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: bold;
+}
+.fw-bolder {
+  font-weight: bolder;
+}
+
+// Position Classes
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+
+// Text Align Classes
+.txt-l {
+  text-align: left;
+}
+.txt-c {
+  text-align: center;
+}
+.txt-r {
+  text-align: right;
+}
+
+// Background Color Classes
+.bg-white {
+  background-color: white;
+}
+
+// Cursors
+.pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,120 @@
+// Import Mixins
+@use "./scss/helpers/mixins" as *;
+
+// Import Colors
+@use "./scss/variables/colors" as *;
+
+header {
+  background-color: white;
+  border-bottom: 1px $secondary-200 solid;
+  .container {
+    padding: 35px 15px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      padding: 20px 20px;
+    }
+    .logo {
+      &.large {
+        @media (max-width: 992px) {
+          display: none;
+        }
+      }
+      &.mobile {
+        color: $blue-default;
+        @media (min-width: 992px) {
+          display: none;
+        }
+      }
+    }
+    .left-side {
+      input {
+        border: 1px $blue-100 solid;
+        max-width: 550px;
+        @media (max-width: 1200px) {
+          width: 400px;
+        }
+        @media (max-width: 992px) {
+          margin-left: 0;
+          border-radius: 10px;
+          padding-right: 20px;
+        }
+      }
+      .search {
+        color: $secondary-400;
+        i {
+          color: $secondary-300;
+        }
+        i:first-child {
+          left: 80px;
+          @media (max-width: 992px) {
+            left: 20px;
+          }
+        }
+        i:last-child {
+          right: 20px;
+          @media (max-width: 992px) {
+            position: relative;
+            right: 0;
+            border-radius: 10px;
+            border: 1px $blue-100 solid;
+            min-width: 50px;
+            height: 45px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        @media (max-width: 992px) {
+          width: 100%;
+          justify-content: space-between;
+          gap: 20px;
+        }
+      }
+      @media (max-width: 992px) {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+    }
+    .right-side {
+      .icons {
+        .icon {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px $blue-100 solid;
+          color: $secondary-400;
+          cursor: pointer;
+          @media (max-width: 992px) {
+            display: none;
+          }
+        }
+        .notifications {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            background-color: red;
+            border-radius: 50%;
+          }
+          @media (max-width: 992px) {
+            display: none;
+          }
+        }
+        img {
+          cursor: pointer;
+        }
+      }
+      @media (max-width: 992px) {
+        order: -1;
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    border: none;
+  }
+}

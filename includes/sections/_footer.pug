@@ -1,0 +1,19 @@
+footer(class="bg-white pt-80 pb-50")
+  div(class="container")
+    div(class="top d-grid gap-30")
+      .info
+        h2(class="logo") MORENT
+        p(class="mt-25 fw-semi-bold") Our vision is to provide convenience#[br]and help increase your sales business.
+      - for (var i = 0; i < links.length; i++)
+        .links
+          h2(class="mt-0 mb-50 fs-20 fw-semi-bold") #{links[i].title}
+          ul
+            li(class="pb-35"): a(href="#") #{links[i].link1}
+            li(class="pb-35"): a(href="#") #{links[i].link2}
+            li(class="pb-35"): a(href="#") #{links[i].link3}
+            li(class="pb-35"): a(href="#") #{links[i].link4}
+    div(class="bottom between-flex mt-30")
+      p(class="copyright fw-semi-bold") &copy; #[span(class="year")] MORENT.All rights reserved
+      div
+        a(href="#" class="mr-40 fw-semi-bold") Privacy &amp; Policy
+        a(href="#" class="fw-semi-bold") Terms &amp; Condition

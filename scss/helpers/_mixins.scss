@@ -1,0 +1,19 @@
+@mixin media($screen) {
+  @if $screen == "mobile" {
+    @media (max-width: 800px) {
+      @content;
+    }
+  } @else if $screen == "small" {
+    @media (min-width: 800px) {
+      @content;
+    }
+  } @else if $screen == "medium" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $screen == "large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

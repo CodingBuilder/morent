@@ -1,0 +1,42 @@
+aside
+  div(class="cars-list mb-30 mt-50 pr-20 fw-semi-bold fs-16")
+    h4(class="m-0 fs-14") Type
+  form(action="" class="types d-flex")
+    div
+      input(type="checkbox", name="sport", id="sport")
+      label(for="sport") Sport
+    div
+      input(type="checkbox", name="SUV", id="SUV")
+      label(for="SUV") SUV
+    div
+      input(type="checkbox", name="MPV", id="MPV")
+      label(for="MPV") MPV
+    div
+      input(type="checkbox", name="sedan", id="sedan")
+      label(for="sedan") Sedan
+    div
+      input(type="checkbox", name="coupe", id="coupe")
+      label(for="coupe") Coupe
+    div
+      input(type="checkbox", name="hatchback", id="hatchback")
+      label(for="hatchback") Hatchback
+  div(class="cars-list mb-30 mt-50 pr-20 fw-semi-bold fs-16")
+    h4(class="m-0 fs-14") Capacity
+  form(action="" class="types d-flex")
+    div
+      input(type="checkbox", name="two-persons", id="two-persons")
+      label(for="two-persons") 2 Persons
+    div
+      input(type="checkbox", name="four-persons", id="four-persons")
+      label(for="four-persons") 4 Persons
+    div
+      input(type="checkbox", name="six-persons", id="six-persons")
+      label(for="six-persons") 6 Persons
+    div
+      input(type="checkbox", name="eight-or-more", id="eight-or-more")
+      label(for="eight-or-more") 8 or More
+  div(class="cars-list mb-30 mt-50 pr-20 fw-semi-bold fs-16")
+    h4(class="m-0 fs-14") Price
+  form(action="")
+    input(type="range", name="price", min="72", max="110", step="2", value="100", class="slider", oninput="slider()")
+    p(class="slider-value fs-20 fw-semi-bold") Max: $100.00
