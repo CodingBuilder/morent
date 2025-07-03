@@ -29,7 +29,7 @@ html(lang="en")
           - var popularCars = [koenigsegg, nissanGTR, rollsRoyce, nissanGTRSilver];
           each car in popularCars
             if (car.discount)
-              div(class="card car rad-10 bg-white p-20", data-car=car.name, data-category=car.category, data-img="imgs/" + car.img, data-gas=car.gas, data-steeringwheel=car.steeringWheel, data-passengers=car.passengers, data-price=car.price, data-discount=car.discount, data-id=car.number)
+              div(class="card car rad-10 bg-white p-20", data-carName=car.name, data-category=car.category, data-img="imgs/" + car.img, data-gas=car.gas, data-steeringwheel=car.steeringWheel, data-passengers=car.passengers, data-price=car.price, data-discount=car.discount, data-id=car.number)
                 div(class="title between-flex")
                   h3(class="m-0") #{car.name}
                   i(class="fa-regular fa-heart fs-20 heart")
@@ -55,7 +55,7 @@ html(lang="en")
                     span(class="fs-18 fw-bold p-relative price") $#{car.price}/
                   a(href="car.html?id=" + car.number class="rad-3 d-block w-fit") Rent Now
             else
-              div(class="card car rad-10 bg-white p-20", data-car=car.name, data-category=car.category, data-img="imgs/" + car.img, data-gas=car.gas, data-steeringwheel=car.steeringWheel, data-passengers=car.passengers, data-price=car.price, data-id=car.number)
+              div(class="card car rad-10 bg-white p-20", data-carName=car.name, data-category=car.category, data-img="imgs/" + car.img, data-gas=car.gas, data-steeringwheel=car.steeringWheel, data-passengers=car.passengers, data-price=car.price, data-id=car.number)
                 div(class="title between-flex")
                   h3(class="m-0") #{car.name}
                   i(class="fa-regular fa-heart fs-20 heart")
@@ -85,7 +85,7 @@ html(lang="en")
         div(class="recomendation-cars list d-grid gap-30")
           - for (var i = 0; i < recomendationCars.length; i++)
             if (recomendationCars[i].discount)
-              div(class="card car rad-10 bg-white p-20", data-car=recomendationCars[i].name, data-category=recomendationCars[i].category, data-largeimg="imgs/" + recomendationCars[i].largeImg, data-mobileimg="imgs/" + recomendationCars[i].mobileImg, data-gas=recomendationCars[i].gas, data-steeringwheel=recomendationCars[i].steeringWheel, data-passengers=recomendationCars[i].passengers, data-price=recomendationCars[i].price, data-discount=recomendationCars[i].discount, data-id=recomendationCars[i].number)
+              div(class="card car rad-10 bg-white p-20", data-carName=recomendationCars[i].name, data-category=recomendationCars[i].category, data-largeimg="imgs/" + recomendationCars[i].largeImg, data-mobileimg="imgs/" + recomendationCars[i].mobileImg, data-gas=recomendationCars[i].gas, data-steeringwheel=recomendationCars[i].steeringWheel, data-passengers=recomendationCars[i].passengers, data-price=recomendationCars[i].price, data-discount=recomendationCars[i].discount, data-id=recomendationCars[i].number)
                 div(class="title between-flex")
                   h3(class="m-0") #{recomendationCars[i].name}
                   i(class="fa-regular fa-heart fs-20 heart")
@@ -112,7 +112,7 @@ html(lang="en")
                     span(class="fs-18 fw-bold p-relative price") $#{recomendationCars[i].price}/
                   a(href="car.html?id=" + recomendationCars[i].number class="rad-3 d-block w-fit") Rent Now
             else
-              div(class="card car rad-10 bg-white p-20", data-car=recomendationCars[i].name, data-category=recomendationCars[i].category, data-largeimg="imgs/" + recomendationCars[i].largeImg, data-mobileimg="imgs/" + recomendationCars[i].mobileImg, data-gas=recomendationCars[i].gas, data-steeringwheel=recomendationCars[i].steeringWheel, data-passengers=recomendationCars[i].passengers, data-price=recomendationCars[i].price, data-id=recomendationCars[i].number)
+              div(class="card car rad-10 bg-white p-20", data-carName=recomendationCars[i].name, data-category=recomendationCars[i].category, data-largeimg="imgs/" + recomendationCars[i].largeImg, data-mobileimg="imgs/" + recomendationCars[i].mobileImg, data-gas=recomendationCars[i].gas, data-steeringwheel=recomendationCars[i].steeringWheel, data-passengers=recomendationCars[i].passengers, data-price=recomendationCars[i].price, data-id=recomendationCars[i].number)
                 div(class="title between-flex")
                   h3(class="m-0") #{recomendationCars[i].name}
                   if (recomendationCars[i].loved)
