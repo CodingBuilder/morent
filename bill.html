@@ -1,3 +1,258 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="title" content="Morent: Rent Any Car You Wan"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="css/normalize.css"><link rel="stylesheet" href="css/all.min.css"><link rel="stylesheet" href="css/framework.css"><link rel="stylesheet" href="css/main.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"><link rel="icon" href="imgs/logo.png"><title>Morent</title></head><body> <header><div class="container between-flex"><div class="left-side d-flex align-center"><a class="large logo" href="index.html">MORENT</a><diV class="search d-flex align-center p-relative">
-<i class="fa-solid fa-magnifying-glass p-absolute fs-20"></i><input class="h-45 rad-20 b-none ml-60 w-550 pl-50 pr-50" type="text" placeholder="Search something here">
-<i class="fa-solid fa-sliders p-absolute fs-20 pointer details"></i></diV></div><div class="right-side"><div class="icons d-flex align-center rounded w-50 h-50 between-flex w-full"><a class="mobile logo" href="index.html">MORENT</a><a href="favourites.html"><i class="fa-solid fa-heart rounded w-44 h-44 fs-20 icon mr-15"></i></a><div class="notifications notifications p-relative mr-15"><a><i class="fa-solid fa-bell rounded w-44 h-44 fs-20 icon"></i></a></div><a><i class="fa-solid fa-gear rounded w-44 h-44 fs-20 mr-15 icon"></i></a><img src="imgs/avatar.png"></div></div></div></header><div class="page d-flex gap-30 p-30"><div class="billing-info"><div class="user-info rad-10 p-30 mb-40 p-relative"><div class="heading"><h2 class="fs-20 fw-bold mt-0 mb-10">Billing Info</h2><div class="steps between-flex mb-35"><span class="fs-14">Please enter your billing info</span><span class="fs-14">Step 1 of 4</span></div></div><form class="d-grid" action=""><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="user-name">Name</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Your Name" id="user-name"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="phone-number">Phone Number</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Your Name" id="phone-number"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="user-address">Address</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Your Name" id="user-address"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="user-city">Town / City</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Your Name" id="user-city"></div></form></div><div class="rental-info rad-10 p-30 mb-40 p-relative"><div class="heading"><h2 class="fs-20 fw-bold mt-0 mb-10">Rental Info</h2><div class="steps between-flex"><span class="fs-14">Please select your rental date</span><span class="fs-14">Step 2 of 4</span></div></div><h3 class="fw-semi-bold p-relative d-flex align-center mt-40 pick-up">Pick - Up</h3><form class="d-grid mt-30" action=""><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="locations">Locations</label><select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="locations"><option disabled selected hidden>Select your city</option></select></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="date">Date</label><select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="date"><option disabled selected hidden>Select your date</option></select></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="time">Time</label><select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="time"><option disabled selected hidden>Select your time</option></select></div></form><h3 class="fw-semi-bold p-relative d-flex align-center mt-40 drop-off">Drop - Off</h3><form class="d-grid mt-30" action=""><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="locations">Locations</label><select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="locations"><option disabled selected hidden>Select your city</option></select></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="date">Date</label><select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="date"><option disabled selected hidden>Select your date</option></select></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="time">Time</label><select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="time"><option disabled selected hidden>Select your time</option></select></div></form></div><div class="payment-method rad-10 p-30 mb-40 p-relative"><div class="heading"><h2 class="fs-20 fw-bold mt-0 mb-10">Payment Method</h2><div class="steps between-flex"><span class="fs-14">Please enter your payment method</span><span class="fs-14">Step 3 of 4</span></div><form class="mt-30"><div class="method rad-10 mb-25"><div class="between-flex"><div class="d-flex align-center choice"><input class="p-relative center-flex" type="radio" id="visa" checked name="payment"><label class="fs-16 fw-semi-bold ml-15" for="visa">Credit Card </label></div><img src="imgs/visa.png" alt="visa"></div><div class="d-grid mt-30 payment-field"><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="card-number">Card Number</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card number" id="card-number"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="expration-date">Expration Date</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="DD/MM/YY" id="expration-date"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="card-holder">Card Holder</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card holder" id="card-holder"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="cvc">CVC</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="CVC" id="cvc"></div></div></div><div class="method rad-10 mb-25"><div class="between-flex"><div class="d-flex align-center choice"><input class="p-relative center-flex" type="radio" id="paypal" name="payment"><label class="fs-16 fw-semi-bold ml-15" for="paypal">PayPal </label></div><img src="imgs/paypal.png" alt="PayPal"></div><div class="d-grid mt-30 payment-field d-none"><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="card-number">Card Number</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card number" id="card-number"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="expration-date">Expration Date</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="DD/MM/YY" id="expration-date"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="card-holder">Card Holder</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card holder" id="card-holder"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="cvc">CVC</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="CVC" id="cvc"></div></div></div><div class="method rad-10 mb-25"><div class="between-flex"><div class="d-flex align-center choice"><input class="p-relative center-flex" type="radio" id="bitcoin" name="payment"><label class="fs-16 fw-semi-bold ml-15" for="bitcoin">Bitcoin </label></div><img src="imgs/bitcoin.png" alt="bitcoin"></div><div class="d-grid mt-30 payment-field d-none"><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="card-number">Card Number</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card number" id="card-number"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="expration-date">Expration Date</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="DD/MM/YY" id="expration-date"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="card-holder">Card Holder</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card holder" id="card-holder"></div><div class="info-input"><label class="d-block mb-15 fw-semi-bold" for="cvc">CVC</label><input class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="CVC" id="cvc"></div></div></div></form></div></div><div class="confirmation rad-10 p-30 mb-40 p-relative"><div class="heading"><h2 class="fs-20 fw-bold mt-0 mb-10">Confirmation</h2><div class="steps between-flex"><span class="fs-14">We are getting to the end. Just few clicks and your rental is ready!</span><span class="fs-14">Step 4 of 4</span></div></div><form class="mt-30" action=""><div class="d-flex align-center mb-30 rad-10"><input class="p-relative center-flex" type="checkbox" name="agrements" id="sending"><label class="fw-semi-bold ml-20" for="sending">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label></div><div class="d-flex align-center rad-10"><input class="p-relative center-flex" type="checkbox" name="agrements" id="terms"><label class="fw-semi-bold ml-20" for="terms">I agree with our terms and conditions and privacy policy.</label></div></form><a class="mt-40 fw-bold w-140 h-56 rad-10 center-flex" href="#">Rent Now</a><img class="mt-35 mb-30 d-block" src="imgs/ic-security-safety.png" alt="sheild"><div class="heading bottom"><h2 class="fs-20 fw-bold mt-0 mb-10">Confirmation</h2><div class="steps"><span class="fs-14">We are getting to the end. Just few clicks and your rental is ready!</span></div></div></div></div><div class="summary p-20 rad-10 h-fit"><h2 class="mt-0 mb-10 fs-20 fw-bold">Rental Summary</h2><p class="mt-0 mb-30 fs-14">Prices may change depending on the length of the rental and the price of your rental car.</p><div class="info d-flex gap-30 pb-40"><div class="image p-20 w-fit h-125 rad-10 between-flex"><img alt="car"></div><div><span class="name d-block fs-32 fw-bold mb-10"></span><p><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-regular fa-star fs-18"></i><span class="fs-14 ml-10">440+ Reviewer</span></p></div></div><div class="price-info subtotal between-flex mt-40"><span>Subtotal</span><span class="car-price fw-semi-bold"></span></div><div class="price-info tax between-flex mt-30"><span>Tax</span><span class="fw-semi-bold">$0</span></div><div class="code p-relative"><input class="w-full pl-20 pr-20 pt-15 pb-15 rad-10 mt-30" type="text" name="promo-code" placeholder="Apply promo code"><button class="p-absolute">Apply now</button></div><div class="total-price between-flex mt-40 mb-10"><div class="text"><h4 class="fs-20 fw-bold mt-0 mb-5">Total Rental Price</h4><p class="fs-14 m-0">Overall price and includes rental discount</p></div><span class="price car-price fs-32 fw-bold"></span></div></div></div><footer class="bg-white pt-80 pb-50"><div class="container"><div class="top d-grid gap-30"><div class="info"><h2 class="logo">MORENT</h2><p class="mt-25 fw-semi-bold">Our vision is to provide convenience<br>and help increase your sales business.</p></div><div class="links"><h2 class="mt-0 mb-50 fs-20 fw-semi-bold">About</h2><ul><li class="pb-35"><a href="#">How it works</a></li><li class="pb-35"><a href="#">Featured</a></li><li class="pb-35"><a href="#">Partnership</a></li><li class="pb-35"><a href="#">Bussiness Relation</a></li></ul></div><div class="links"><h2 class="mt-0 mb-50 fs-20 fw-semi-bold">Community</h2><ul><li class="pb-35"><a href="#">Events</a></li><li class="pb-35"><a href="#">Blog</a></li><li class="pb-35"><a href="#">Podcast</a></li><li class="pb-35"><a href="#">Invite a friend</a></li></ul></div><div class="links"><h2 class="mt-0 mb-50 fs-20 fw-semi-bold">Social</h2><ul><li class="pb-35"><a href="#">Discord</a></li><li class="pb-35"><a href="#">Instagram</a></li><li class="pb-35"><a href="#">Twitter</a></li><li class="pb-35"><a href="#">Facebook</a></li></ul></div></div><div class="bottom between-flex mt-30"><p class="copyright fw-semi-bold">&copy; <span class="year"></span> MORENT.All rights reserved</p><div><a class="mr-40 fw-semi-bold" href="#">Privacy &amp; Policy</a><a class="fw-semi-bold" href="#">Terms &amp; Condition</a></div></div></div></footer><script src="src/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Morent: Rent Any Car You Wan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/logo.png">
+    <title>Morent</title>
+  </head>
+  <body> 
+    <header>
+      <div class="container between-flex">
+        <div class="left-side d-flex align-center"><a class="large logo" href="index.html">MORENT</a>
+          <diV class="search d-flex align-center p-relative">
+            
+            <i class="fa-solid fa-magnifying-glass p-absolute fs-20"></i>
+            <input class="h-45 rad-20 b-none ml-60 w-550 pl-50 pr-50" type="text" placeholder="Search something here">
+            <i class="fa-solid fa-sliders p-absolute fs-20 pointer details"></i>
+          </diV>
+        </div>
+        <div class="right-side">
+          <div class="icons d-flex align-center rounded w-50 h-50 between-flex w-full"><a class="mobile logo" href="index.html">MORENT</a><a href="favourites.html"><i class="fa-solid fa-heart rounded w-44 h-44 fs-20 icon mr-15"></i></a>
+            <div class="notifications notifications p-relative mr-15"><a><i class="fa-solid fa-bell rounded w-44 h-44 fs-20 icon"></i></a></div><a><i class="fa-solid fa-gear rounded w-44 h-44 fs-20 mr-15 icon"></i></a><img src="imgs/avatar.png">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page d-flex gap-30 p-30">
+      <div class="billing-info">
+        <div class="user-info rad-10 p-30 mb-40 p-relative">
+          <div class="heading">
+            <h2 class="fs-20 fw-bold mt-0 mb-10">Billing Info</h2>
+            <div class="steps between-flex mb-35"><span class="fs-14">Please enter your billing info</span><span class="fs-14">Step 1 of 4</span></div>
+          </div>
+          <form class="d-grid" action="">
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="user-name">Name</label>
+              <input class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Your Name" id="user-name">
+              <p class="error text fs-14 d-none"></p>
+            </div>
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="phone-number">Phone Number</label>
+              <input class="phone-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="example: +XX  XXXXXXXXXXX" id="phone-number">
+              <p class="error phone fs-14 d-none"></p>
+            </div>
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="user-address">Address</label>
+              <input class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Address" id="user-address">
+              <p class="error text fs-14 d-none"></p>
+            </div>
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="user-city">Town / City</label>
+              <input class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Town or city" id="user-city">
+              <p class="error text fs-14 d-none"></p>
+            </div>
+          </form>
+        </div>
+        <div class="rental-info rad-10 p-30 mb-40 p-relative">
+          <div class="heading">
+            <h2 class="fs-20 fw-bold mt-0 mb-10">Rental Info</h2>
+            <div class="steps between-flex"><span class="fs-14">Please select your rental date</span><span class="fs-14">Step 2 of 4</span></div>
+          </div>
+          <h3 class="fw-semi-bold p-relative d-flex align-center mt-40 pick-up">Pick - Up</h3>
+          <form class="d-grid mt-30" action="">
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="locations">Locations</label>
+              <select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="locations">
+                <option disabled selected hidden>Select your city</option>
+              </select>
+            </div>
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="date">Date</label>
+              <select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="date">
+                <option disabled selected hidden>Select your date</option>
+              </select>
+            </div>
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="time">Time</label>
+              <select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="time">
+                <option disabled selected hidden>Select your time</option>
+              </select>
+            </div>
+          </form>
+          <h3 class="fw-semi-bold p-relative d-flex align-center mt-40 drop-off">Drop - Off</h3>
+          <form class="d-grid mt-30" action="">
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="locations">Locations</label>
+              <select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="locations">
+                <option disabled selected hidden>Select your city</option>
+              </select>
+            </div>
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="date">Date</label>
+              <select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="date">
+                <option disabled selected hidden>Select your date</option>
+              </select>
+            </div>
+            <div class="info-input">
+              <label class="d-block mb-15 fw-semi-bold" for="time">Time</label>
+              <select class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" name="location" id="time">
+                <option disabled selected hidden>Select your time</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="payment-method rad-10 p-30 mb-40 p-relative">
+          <div class="heading">
+            <h2 class="fs-20 fw-bold mt-0 mb-10">Payment Method</h2>
+            <div class="steps between-flex"><span class="fs-14">Please enter your payment method</span><span class="fs-14">Step 3 of 4</span></div>
+            <form class="mt-30">
+              <div class="method rad-10 mb-25">
+                <div class="between-flex">
+                  <div class="d-flex align-center choice">
+                    <input class="choice p-relative center-flex" type="radio" id="visa" checked name="payment">
+                    <label class="fs-16 fw-semi-bold ml-15" for="visa">Credit Card </label>
+                  </div><img src="imgs/visa.png" alt="visa">
+                </div>
+                <div class="d-grid mt-30 payment-field">
+                  <div class="info-input">
+                    <label class="d-block mb-15 fw-semi-bold" for="card-number">Card Number</label>
+                    <input class="card-number-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card number" id="card-number">
+                    <p class="error card-number fs-14 d-none"></p>
+                  </div>
+                  <div class="info-input">
+                    <label class="d-block mb-15 fw-semi-bold" for="expiration-date">Expiration Date</label>
+                    <input class="exp-date pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="DD/MM/YY" id="expiration-date">
+                    <p class="error date fs-14 d-none"></p>
+                  </div>
+                  <div class="info-input">
+                    <label class="d-block mb-15 fw-semi-bold" for="card-holder">Card Holder</label>
+                    <input class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="Card holder" id="card-holder">
+                    <p class="error text fs-14 d-none"></p>
+                  </div>
+                  <div class="info-input">
+                    <label class="d-block mb-15 fw-semi-bold" for="cvc">CVC</label>
+                    <input class="cvc-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" type="text" placeholder="CVC" id="cvc">
+                    <p class="error cvc fs-14 d-none"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="method rad-10 mb-25">
+                <div class="between-flex">
+                  <div class="d-flex align-center choice">
+                    <input class="choice p-relative center-flex" type="radio" id="paypal" name="payment">
+                    <label class="fs-16 fw-semi-bold ml-15" for="paypal">PayPal </label>
+                  </div><img src="imgs/paypal.png" alt="PayPal">
+                </div>
+              </div>
+              <div class="method rad-10 mb-25">
+                <div class="between-flex">
+                  <div class="d-flex align-center choice">
+                    <input class="choice p-relative center-flex" type="radio" id="bitcoin" name="payment">
+                    <label class="fs-16 fw-semi-bold ml-15" for="bitcoin">Bitcoin </label>
+                  </div><img src="imgs/bitcoin.png" alt="bitcoin">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="confirmation rad-10 p-30 mb-40 p-relative">
+          <div class="heading">
+            <h2 class="fs-20 fw-bold mt-0 mb-10">Confirmation</h2>
+            <div class="steps between-flex"><span class="fs-14">We are getting to the end. Just few clicks and your rental is ready!</span><span class="fs-14">Step 4 of 4</span></div>
+          </div>
+          <form class="mt-30" action="">
+            <div class="condition-btn d-flex align-center mb-30 rad-10">
+              <input class="p-relative center-flex" type="checkbox" name="agrements" id="sending">
+              <label class="fw-semi-bold ml-20" for="sending">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
+            </div>
+            <p class="error condition fs-14 d-none">Please Agree With This Condition</p>
+            <div class="condition-btn d-flex align-center rad-10">
+              <input class="p-relative center-flex" type="checkbox" name="agrements" id="terms">
+              <label class="fw-semi-bold ml-20" for="terms">I agree with our terms and conditions and privacy policy.</label>
+            </div>
+            <p class="error condition fs-14 d-none">Please Agree With This Condition</p>
+          </form>
+          <input class="submit-btn mt-40 fw-bold w-140 h-56 rad-10 center-flex" type="submit" value="Rent Now"><img class="mt-35 mb-30 d-block" src="imgs/ic-security-safety.png" alt="sheild">
+          <div class="heading bottom">
+            <h2 class="fs-20 fw-bold mt-0 mb-10">Confirmation</h2>
+            <div class="steps"><span class="fs-14">We are getting to the end. Just few clicks and your rental is ready!</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="summary p-20 rad-10 h-fit">
+        <h2 class="mt-0 mb-10 fs-20 fw-bold">Rental Summary</h2>
+        <p class="mt-0 mb-30 fs-14">Prices may change depending on the length of the rental and the price of your rental car.</p>
+        <div class="info d-flex gap-30 pb-40">
+          <div class="image p-20 w-fit h-125 rad-10 between-flex"><img alt="car"></div>
+          <div><span class="name d-block fs-32 fw-bold mb-10"></span>
+            <p><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-solid fa-star fs-18 mr-5"></i><i class="fa-regular fa-star fs-18"></i><span class="fs-14 ml-10">440+ Reviewer</span>
+            </p>
+          </div>
+        </div>
+        <div class="price-info subtotal between-flex mt-40"><span>Subtotal</span><span class="car-price fw-semi-bold"></span></div>
+        <div class="price-info tax between-flex mt-30"><span>Tax</span><span class="fw-semi-bold">$0</span></div>
+        <div class="code p-relative">
+          <input class="w-full pl-20 pr-20 pt-15 pb-15 rad-10 mt-30" type="text" name="promo-code" placeholder="Apply promo code">
+          <button class="p-absolute">Apply now</button>
+        </div>
+        <div class="total-price between-flex mt-40 mb-10">
+          <div class="text">
+            <h4 class="fs-20 fw-bold mt-0 mb-5">Total Rental Price</h4>
+            <p class="fs-14 m-0">Overall price and includes rental discount</p>
+          </div><span class="price car-price fs-32 fw-bold"></span>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-white pt-80 pb-50">
+      <div class="container">
+        <div class="top d-grid gap-30">
+          <div class="info">
+            <h2 class="logo">MORENT</h2>
+            <p class="mt-25 fw-semi-bold">Our vision is to provide convenience<br>and help increase your sales business.</p>
+          </div>
+          <div class="links">
+            <h2 class="mt-0 mb-50 fs-20 fw-semi-bold">About</h2>
+            <ul>
+              <li class="pb-35"><a href="#">How it works</a></li>
+              <li class="pb-35"><a href="#">Featured</a></li>
+              <li class="pb-35"><a href="#">Partnership</a></li>
+              <li class="pb-35"><a href="#">Bussiness Relation</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2 class="mt-0 mb-50 fs-20 fw-semi-bold">Community</h2>
+            <ul>
+              <li class="pb-35"><a href="#">Events</a></li>
+              <li class="pb-35"><a href="#">Blog</a></li>
+              <li class="pb-35"><a href="#">Podcast</a></li>
+              <li class="pb-35"><a href="#">Invite a friend</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2 class="mt-0 mb-50 fs-20 fw-semi-bold">Social</h2>
+            <ul>
+              <li class="pb-35"><a href="#">Discord</a></li>
+              <li class="pb-35"><a href="#">Instagram</a></li>
+              <li class="pb-35"><a href="#">Twitter</a></li>
+              <li class="pb-35"><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom between-flex mt-30">
+          <p class="copyright fw-semi-bold">&copy; <span class="year"></span> MORENT.All rights reserved</p>
+          <div><a class="mr-40 fw-semi-bold" href="#">Privacy &amp; Policy</a><a class="fw-semi-bold" href="#">Terms &amp; Condition</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="dist/main.js"></script>
+  </body>
+</html>

@@ -15,16 +15,20 @@ html(lang="en")
           form(action="" class="d-grid")
             div(class="info-input")
               label(for="user-name" class="d-block mb-15 fw-semi-bold") Name
-              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-name")
+              input(type="text" placeholder="Your Name" class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-name")
+              p.error.text.fs-14.d-none
             div(class="info-input")
               label(for="phone-number" class="d-block mb-15 fw-semi-bold") Phone Number
-              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="phone-number")
+              input(type="text" placeholder="example: +XX  XXXXXXXXXXX" class="phone-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="phone-number")
+              p.error.phone.fs-14.d-none
             div(class="info-input")
               label(for="user-address" class="d-block mb-15 fw-semi-bold") Address
-              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-address")
+              input(type="text" placeholder="Address" class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-address")
+              p.error.text.fs-14.d-none
             div(class="info-input")
               label(for="user-city" class="d-block mb-15 fw-semi-bold") Town / City
-              input(type="text" placeholder="Your Name" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-city")
+              input(type="text" placeholder="Town or city" class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="user-city")
+              p.error.text.fs-14.d-none
         div(class="rental-info rad-10 p-30 mb-40 p-relative")
           .heading
             h2.fs-20.fw-bold.mt-0.mb-10 Rental Info
@@ -69,60 +73,38 @@ html(lang="en")
               div(class="method rad-10 mb-25")
                 div(class="between-flex")
                   div(class="d-flex align-center choice")
-                    input(type="radio" id="visa" checked class="p-relative center-flex" name="payment")
+                    input(type="radio" id="visa" checked class="choice p-relative center-flex" name="payment")
                     label(for="visa" class="fs-16 fw-semi-bold ml-15") Credit Card 
                   img(src="imgs/visa.png", alt="visa")
                 div(class="d-grid mt-30 payment-field")
                   div(class="info-input")
                     label(for="card-number" class="d-block mb-15 fw-semi-bold") Card Number
-                    input(type="text" placeholder="Card number" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-number")
+                    input(type="text" placeholder="Card number" class="card-number-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-number")
+                    p.error.card-number.fs-14.d-none
                   div(class="info-input")
-                    label(for="expration-date" class="d-block mb-15 fw-semi-bold") Expration Date
-                    input(type="text" placeholder="DD/MM/YY" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="expration-date")
+                    label(for="expiration-date" class="d-block mb-15 fw-semi-bold") Expiration Date
+                    input(type="text" placeholder="DD/MM/YY" class="exp-date pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="expiration-date")
+                    p.error.date.fs-14.d-none
                   div(class="info-input")
                     label(for="card-holder" class="d-block mb-15 fw-semi-bold") Card Holder
-                    input(type="text" placeholder="Card holder" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-holder")
+                    input(type="text" placeholder="Card holder" class="text-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-holder")
+                    p.error.text.fs-14.d-none
                   div(class="info-input")
                     label(for="cvc" class="d-block mb-15 fw-semi-bold") CVC
-                    input(type="text" placeholder="CVC" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="cvc")
+                    input(type="text" placeholder="CVC" class="cvc-field pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="cvc")
+                    p.error.cvc.fs-14.d-none
               div(class="method rad-10 mb-25")
                 div(class="between-flex")
                   div(class="d-flex align-center choice")
-                    input(type="radio" id="paypal" class="p-relative center-flex" name="payment")
+                    input(type="radio" id="paypal" class="choice p-relative center-flex" name="payment")
                     label(for="paypal" class="fs-16 fw-semi-bold ml-15") PayPal 
                   img(src="imgs/paypal.png", alt="PayPal")
-                div(class="d-grid mt-30 payment-field d-none")
-                  div(class="info-input")
-                    label(for="card-number" class="d-block mb-15 fw-semi-bold") Card Number
-                    input(type="text" placeholder="Card number" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-number")
-                  div(class="info-input")
-                    label(for="expration-date" class="d-block mb-15 fw-semi-bold") Expration Date
-                    input(type="text" placeholder="DD/MM/YY" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="expration-date")
-                  div(class="info-input")
-                    label(for="card-holder" class="d-block mb-15 fw-semi-bold") Card Holder
-                    input(type="text" placeholder="Card holder" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-holder")
-                  div(class="info-input")
-                    label(for="cvc" class="d-block mb-15 fw-semi-bold") CVC
-                    input(type="text" placeholder="CVC" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="cvc")
               div(class="method rad-10 mb-25")
                 div(class="between-flex")
                   div(class="d-flex align-center choice")
-                    input(type="radio" id="bitcoin" class="p-relative center-flex" name="payment")
+                    input(type="radio" id="bitcoin" class="choice p-relative center-flex" name="payment")
                     label(for="bitcoin" class="fs-16 fw-semi-bold ml-15") Bitcoin 
                   img(src="imgs/bitcoin.png", alt="bitcoin")
-                div(class="d-grid mt-30 payment-field d-none")
-                  div(class="info-input")
-                    label(for="card-number" class="d-block mb-15 fw-semi-bold") Card Number
-                    input(type="text" placeholder="Card number" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-number")
-                  div(class="info-input")
-                    label(for="expration-date" class="d-block mb-15 fw-semi-bold") Expration Date
-                    input(type="text" placeholder="DD/MM/YY" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="expration-date")
-                  div(class="info-input")
-                    label(for="card-holder" class="d-block mb-15 fw-semi-bold") Card Holder
-                    input(type="text" placeholder="Card holder" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="card-holder")
-                  div(class="info-input")
-                    label(for="cvc" class="d-block mb-15 fw-semi-bold") CVC
-                    input(type="text" placeholder="CVC" class="pl-28 pr-28 pt-20 pb-20 w-full rad-10" id="cvc")
         div(class="confirmation rad-10 p-30 mb-40 p-relative")
           .heading
             h2.fs-20.fw-bold.mt-0.mb-10 Confirmation
@@ -130,13 +112,15 @@ html(lang="en")
               span.fs-14 We are getting to the end. Just few clicks and your rental is ready!
               span.fs-14 Step 4 of 4
           form(action="" class="mt-30")
-            div(class="d-flex align-center mb-30 rad-10")
+            div(class="condition-btn d-flex align-center mb-30 rad-10")
               input(type="checkbox", name="agrements" id="sending" class="p-relative center-flex")
               label(class="fw-semi-bold ml-20" for="sending") I agree with sending an Marketing and newsletter emails. No spam, promissed!
-            div(class="d-flex align-center rad-10")
+            p.error.condition.fs-14.d-none Please Agree With This Condition
+            div(class="condition-btn d-flex align-center rad-10")
               input(type="checkbox", name="agrements" id="terms" class="p-relative center-flex")
               label(class="fw-semi-bold ml-20" for="terms") I agree with our terms and conditions and privacy policy.
-          a(href="#" class="mt-40 fw-bold w-140 h-56 rad-10 center-flex") Rent Now
+            p.error.condition.fs-14.d-none Please Agree With This Condition
+          input(type="submit" class="submit-btn mt-40 fw-bold w-140 h-56 rad-10 center-flex" value="Rent Now")
           img(src="imgs/ic-security-safety.png", alt="sheild" class="mt-35 mb-30 d-block")
           .heading.bottom
             h2.fs-20.fw-bold.mt-0.mb-10 Confirmation
@@ -170,4 +154,4 @@ html(lang="en")
             p.fs-14.m-0 Overall price and includes rental discount
           span.price.car-price.fs-32.fw-bold
     include ../includes/sections/_footer
-    script(src="src/main.js")
+    script(src="dist/main.js")
