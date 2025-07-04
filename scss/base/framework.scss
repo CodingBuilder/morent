@@ -104,6 +104,15 @@
 .align-center {
   align-items: center;
 }
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
 .between-flex {
   display: flex;
   align-items: center;

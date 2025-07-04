@@ -983,3 +983,58 @@ confirmBtn?.addEventListener("click", (e) => {
     e.preventDefault();
   }
 });
+
+const colors = ["red", "blue", "yellow", "green"];
+
+const notificationsList = document.querySelector(".notis-page .notis-holder") as HTMLDivElement;
+
+function initNoti(page: HTMLDivElement, title: string, content: string, date: string): void {
+  let holder = document.createElement("div");
+  holder.className = "noti bg-white pt-15 pb-15 pl-20 pr-20 d-flex gap-10 rad-10";
+  page.appendChild(holder);
+
+  let leftSide = document.createElement("div");
+  leftSide.className = "left";
+  holder.appendChild(leftSide);
+
+  let pin = document.createElement("span");
+  pin.className = "d-block mt-2";
+  pin.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+  leftSide.appendChild(pin);
+
+  let rightSide = document.createElement("div");
+  rightSide.className = "right";
+  holder.appendChild(rightSide);
+
+  let notiTitle = document.createElement("span");
+  notiTitle.className = "mb-10 fw-bold";
+  notiTitle.textContent = `Title: ${title}`;
+  rightSide.appendChild(notiTitle);
+
+  let notiContent = document.createElement("p");
+  notiContent.className = "fs-14 mt-20 mb-20";
+  notiContent.textContent = content;
+  rightSide.appendChild(notiContent);
+
+  let notiDate = document.createElement("span");
+  notiDate.className = "fs-12 d-block txt-r";
+  notiDate.textContent = date;
+  rightSide.appendChild(notiDate);
+}
+
+async function fetchData(url: string) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error("Failed To Fetch Data");
+  }
+
+  const data = await response.json();
+  return data;
+}
+
+const dataLength = fetchData("data/notifications.json").then((res) => {
+  for (let i = 0; i < res.length; i++) {
+    initNoti(notificationsList, res[i].title, res[i].content, res[i].date);
+  }
+});

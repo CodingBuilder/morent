@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 const hearts = Array.from(document.querySelectorAll(".heart"));
 const cars = document.querySelectorAll("main .car");
 const max = 110;
@@ -687,5 +696,49 @@ confirmBtn === null || confirmBtn === void 0 ? void 0 : confirmBtn.addEventListe
     });
     if (!valid) {
         e.preventDefault();
+    }
+});
+const colors = ["red", "blue", "yellow", "green"];
+const notificationsList = document.querySelector(".notis-page .notis-holder");
+function initNoti(page, title, content, date) {
+    let holder = document.createElement("div");
+    holder.className = "noti bg-white pt-15 pb-15 pl-20 pr-20 d-flex gap-10 rad-10";
+    page.appendChild(holder);
+    let leftSide = document.createElement("div");
+    leftSide.className = "left";
+    holder.appendChild(leftSide);
+    let pin = document.createElement("span");
+    pin.className = "d-block mt-2";
+    pin.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+    leftSide.appendChild(pin);
+    let rightSide = document.createElement("div");
+    rightSide.className = "right";
+    holder.appendChild(rightSide);
+    let notiTitle = document.createElement("span");
+    notiTitle.className = "mb-10 fw-bold";
+    notiTitle.textContent = `Title: ${title}`;
+    rightSide.appendChild(notiTitle);
+    let notiContent = document.createElement("p");
+    notiContent.className = "fs-14 mt-20 mb-20";
+    notiContent.textContent = content;
+    rightSide.appendChild(notiContent);
+    let notiDate = document.createElement("span");
+    notiDate.className = "fs-12 d-block txt-r";
+    notiDate.textContent = date;
+    rightSide.appendChild(notiDate);
+}
+function fetchData(url) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch(url);
+        if (!response.ok) {
+            throw new Error("Failed To Fetch Data");
+        }
+        const data = yield response.json();
+        return data;
+    });
+}
+const dataLength = fetchData("data/notifications.json").then((res) => {
+    for (let i = 0; i < res.length; i++) {
+        initNoti(notificationsList, res[i].title, res[i].content, res[i].date);
     }
 });
