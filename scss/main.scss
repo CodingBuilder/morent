@@ -835,3 +835,70 @@ main.car-page {
     flex-direction: column;
   }
 }
+
+.notis-page {
+  padding: 50px 20px;
+  > .title {
+    span {
+      color: $secondary-300;
+      &::before {
+        content: "";
+        position: relative;
+        width: 4px;
+        height: 4px;
+        display: block;
+        border-radius: 50%;
+        margin-right: 10px;
+        background-color: #e23535;
+        border: 4px #dd9a9a solid;
+      }
+    }
+  }
+  .notis-holder {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    .noti {
+      transition: .3s;
+      .left {
+        span {
+          width: 14px;
+          height: 14px;
+          display: block;
+          border-radius: 50%;
+          margin-right: 10px;
+          &.red {
+            background-color: #e23535;
+            border: 4px #dd9a9a solid;
+          }
+          &.blue {
+            background-color: $blue-600;
+            border: 4px $blue-200 solid;
+          }
+          &.green {
+            background-color: rgb(20, 151, 79);
+            border: 4px rgb(141, 207, 171) solid;
+          }
+          &.yellow {
+            background-color: rgb(145, 153, 33);
+            border: 4px rgb(212, 216, 162) solid;
+          }
+        }
+      }
+      .right {
+        span {
+          color: $secondary-300;
+        }
+        p {
+          color: $secondary-400;
+          line-height: 1.8;
+          width: 80%;
+        }
+      }
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+    @include media("mobile") {
+      grid-template-columns: minmax(200px, 1fr);
+    }
+  }
+}
